@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'nowayregular';
+    src: url('../font/noway-regular-webfont.eot');
+    src: url('../font/noway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/noway-regular-webfont.woff2') format('woff2'),
+         url('../font/noway-regular-webfont.woff') format('woff'),
+         url('../font/noway-regular-webfont.ttf') format('truetype'),
+         url('../font/noway-regular-webfont.svg#nowayregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nowaymedium';
+    src: url('../font/noway-medium-webfont.eot');
+    src: url('../font/noway-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/noway-medium-webfont.woff2') format('woff2'),
+         url('../font/noway-medium-webfont.woff') format('woff'),
+         url('../font/noway-medium-webfont.ttf') format('truetype'),
+         url('../font/noway-medium-webfont.svg#nowaymedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nowaybold';
+    src: url('../font/noway-bold-webfont.eot');
+    src: url('../font/noway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/noway-bold-webfont.woff2') format('woff2'),
+         url('../font/noway-bold-webfont.woff') format('woff'),
+         url('../font/noway-bold-webfont.ttf') format('truetype'),
+         url('../font/noway-bold-webfont.svg#nowaybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'nowayregular', -apple-system, 'BlinkMacSystemFont', 'San Francisco', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+}
+
+.content-wrapper {
+  max-width: 2000px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.section {
+  border-bottom: 1px solid #D8E1E8;
+  display: flex;
+  padding: 0;
+  height: 35vw;
+  max-height: 700px;
+  min-height: 400px;
+  align-items: stretch;
+}
+
+.first-column {
+  flex: 0 0.6 500px;
+  padding: 80px;
+  overflow:hidden;
+}
+
+.second-column  {
+  padding-right: 80px;
+  flex: 1 1 1000px;
+}
+
+.second-column .image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.hover-zoom {
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+}
+
+.hover-zoom .image {
+  /* transition: transform 200ms cubic-bezier(0.215, 0.61, 0.355, 1); */
+}
+
+.hover-zoom:hover .image {
+  /* transform: scale(1.05); */
+}
+
+.header-container {
+  padding: calc(40px + (80 - 40) * ((100vw - 900px)/(1100)));
+  border-bottom: 1px solid #D8E1E8;
+  /* max-width: 700px; */
+}
+
+.header-container h1 {
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  font-family: 'nowaybold';
+}
+
+.header-container p {
+  line-height: 30px;
+  max-width: 400px;
+  font-size: 14px;
+}
+
+.work-logo {
+  width: 20px;
+  height: auto;
+}
+
+.work-description {
+}
+
+.line-link {
+  font-family: 'nowaymedium'
+  font-size: 14px;
+}
+
+.line-link a {
+  color: black;
+  position: relative;
+  text-decoration: none;
+  transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.line-link a::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 50%;
+  max-height: 3px;
+  margin-bottom: -5px;
+  border-radius: 20px;
+  transition: all 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.line-link a:hover::before,
+.line-link a:active::before,
+.line-link a:focus::before {
+  width: 100%;
+}
+
+.section h1 {
+  font-family: 'nowaybold';
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 44px;
+}
+
+.section h2 {
+  font-family: 'nowaymedium';
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.section .work-description {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+.bottom-container {
+  height: auto !important;
+  min-height: inherit !important;
+}
+
+.gradient-filter {
+  pointer-events: none;
+  touch-action: none;
+  position: fixed;
+  left:0;
+  right: 0;
+  bottom: 0;
+  height: 10vh;
+  filter: blur(10px);
+  /* background: linear-gradient(to top, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 100%); */
+}
+
+@media (max-width: 2000px) {
+
+  .header-container h1 {
+    text-transform: uppercase;
+    font-family: 'nowaybold';
+  }
+
+  .header-container p {
+    font-size: 14px;
+    line-height: calc(10px + 14px + (20 - 14) * ((100vw - 900px)/(1100)));
+  }
+
+  .section h1 {
+    letter-spacing: 1.1px;
+    font-size: 16px;
+    line-height: calc(8px + 16px + (36 - 16) * ((100vw - 900px)/(1100)));
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  }
+  .section h2 {
+    font-size: 14px;
+    line-height: calc(8px + 14px + (24 - 14) * ((100vw - 900px)/(1100)));
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+  }
+  .section .work-description {
+    font-size: 14px;
+    line-height: calc(8px + 12px + (18 - 12) * ((100vw - 900px)/(1100)));
+  }
+  .line-link {
+    font-size: 14px;
+  }
+  .first-column {
+    padding: calc(40px + (80 - 40) * ((100vw - 900px)/(1100)));
+  }
+  .second-column {
+    padding-right: calc(40px + (80 - 40) * ((100vw - 900px)/(1100)));
+  }
+}
+
+@media (max-width: 900px) {
+
+  .section {
+    border-bottom: 1px solid #D8E1E8;
+    display: block;
+    padding: 0;
+    height: auto;
+    max-height: initial;
+    min-height: initial;
+  }
+
+  .header-container {
+    padding: 40px;
+  }
+
+  .first-column {
+    padding: 40px;
+    overflow:hidden;
+  }
+
+  .second-column  {
+    padding: none;
+    width: 100vw;
+    height: 63vw;
+  }
+}
